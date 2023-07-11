@@ -1,0 +1,12 @@
+<%= form_with model: todo do |form| %>
+  <% if form.object.errors.any? %>
+    <div>
+    <% form.object.errors.full_messages.each do |message| %>
+      <div><%= message %></div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%= form.text_field :title, required: true %>
+  <%= form.submit %>
+<% end %>

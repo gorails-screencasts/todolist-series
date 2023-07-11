@@ -1,0 +1,5 @@
+<li class="group">
+  <%= todo.title %>
+  <%= link_to "Edit", edit_todo_path(todo), class: "hidden group-hover:inline" %>
+  <%= button_to "Remove", todo_path(todo), method: :delete, data: {turbo_confirm: "Are you sure?"}, form_class: "inline-block mb-0", class: "hidden group-hover:inline" %>
+</li>
