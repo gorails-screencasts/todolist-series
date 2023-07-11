@@ -2,7 +2,7 @@ class TodosController < ApplicationController
   before_action :set_todo, only: [:edit, :update, :destroy]
 
   def index
-    @todos = Todo.all
+    @todos = Todo.by_completion
     @todo = Todo.new
   end
 
@@ -11,7 +11,7 @@ class TodosController < ApplicationController
     if @todo.save
       redirect_to root_path
     else
-      @todos = Todo.all
+      @todos = Todo.by_completion
       render :index, status: :unprocessable_entity
     end
   end

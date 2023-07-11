@@ -1,5 +1,12 @@
 <li class="group">
+  <%= form_with model: todo, url: todo_complete_path(todo), class: "inline-block mt-0" do |form| %>
+    <%= form.check_box :complete, checked: form.object.completed_at?, onchange: "this.form.requestSubmit()" %>
+  <% end %>
+
   <%= todo.title %>
-  <%= link_to "Edit", edit_todo_path(todo), class: "hidden group-hover:inline" %>
-  <%= button_to "Remove", todo_path(todo), method: :delete, data: {turbo_confirm: "Are you sure?"}, form_class: "inline-block mb-0", class: "hidden group-hover:inline" %>
+
+  <span class="ml-8">
+    <%= link_to "Edit", edit_todo_path(todo), class: "hidden group-hover:inline" %>
+    <%= button_to "Remove", todo_path(todo), method: :delete, data: {turbo_confirm: "Are you sure?"}, form_class: "inline-block mb-0", class: "hidden group-hover:inline" %>
+  </span>
 </li>
