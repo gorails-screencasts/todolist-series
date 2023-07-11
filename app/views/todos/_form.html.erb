@@ -7,6 +7,6 @@
     </div>
   <% end %>
 
-  <%= form.text_field :title, required: true %>
-  <%= form.submit %>
+  <%= form.text_field :title, required: true, autofocus: true, placeholder: "What do you need to do?", class: "w-full" %>
+  <%#= form.submit %>
 <% end %>
