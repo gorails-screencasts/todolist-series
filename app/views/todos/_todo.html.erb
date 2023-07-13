@@ -1,4 +1,4 @@
-<li class="group">
+<li class="group" draggable="<%= todo.incomplete? %>" data-action="drag->sort#drag dragend->sort#dragend" data-sort-url="<%= todo_move_path(todo) %>">
   <%= form_with model: todo, url: todo_complete_path(todo), class: "inline-block mt-0" do |form| %>
     <%= form.check_box :complete, checked: form.object.completed_at?, onchange: "this.form.requestSubmit()" %>
   <% end %>

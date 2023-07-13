@@ -66,6 +66,8 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    acts_as_list (1.1.0)
+      activerecord (>= 4.2)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
     bindex (0.8.1)
@@ -170,6 +172,8 @@ GEM
     regexp_parser (2.8.1)
     reline (0.3.6)
       io-console (~> 0.5)
+    requestjs-rails (0.0.10)
+      rails (>= 6.0.0)
     rexml (3.2.5)
     rubyzip (2.3.2)
     selenium-webdriver (4.10.0)
@@ -219,6 +223,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  acts_as_list (~> 1.1)
   bootsnap
   capybara
   debug
@@ -228,6 +233,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.6)
   redis (~> 4.0)
+  requestjs-rails (~> 0.0.10)
   selenium-webdriver
   sprockets-rails
   stimulus-rails

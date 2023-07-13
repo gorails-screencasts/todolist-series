@@ -2,6 +2,6 @@
 
 <%= render "form", todo: @todo %>
 
-<ul>
-  <%= render @todos %>
+<ul data-controller="sort" data-sort-active-class="opacity-50">
+  <%= render @todos.by_position %>
 </ul>
